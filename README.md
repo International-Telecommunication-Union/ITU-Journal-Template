@@ -7,5 +7,5 @@ The website of the Journal is: https://www.itu.int/en/journal/j-fet/
 
 Please contact journal@itu.int for more information.
 
-[!ITU Journal on Future and Evolving Technologies](ITU-J-FET.png)
+[!ITU Journal on Future and Evolving Technologies](./ITU-J-FET.png)
 
