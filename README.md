@@ -6,3 +6,6 @@ You can download the most recent release (v0.1) of the template here: https://gi
 The website of the Journal is: https://www.itu.int/en/journal/j-fet/
 
 Please contact journal@itu.int for more information.
+
+[!ITU Journal on Future and Evolving Technologies}(ITU-J-FET.png)
+
