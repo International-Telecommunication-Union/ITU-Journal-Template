@@ -21,7 +21,7 @@
 \rhead{{\footnotesize ITU Journal on Future and Evolving Technologies, Volume 0 (2022), Issue 0}}
 \lfoot{© 2022 International Telecommunication Union}
 \rfoot{\thepage}
-\fancypagestyle{firstpage}{%
+\fancypagestyle{titlepage}{%
 	\renewcommand{\headrulewidth}{0pt}
 	\rhead{}
 	\lfoot{}
@@ -68,7 +68,7 @@
 \def\abstract{\itshape}
 
 \begin{document}
-\thispagestyle{firstpage}
+\thispagestyle{titlepage}
 \twocolumn[
 \begin{@twocolumnfalse}
 	\maketitle
@@ -83,7 +83,7 @@
 		Do not cite references in the abstract.
 	\end{abstract}
 	\bigskip
-	\keywords{One, two  (List approximately five keywords in alphabetical order, separated by commas.}
+	\keywords{One, two, (List approximately five keywords in alphabetical order, separated by commas.)}
 	\bigskip
 	\end{@twocolumnfalse}
 ]
@@ -91,7 +91,7 @@
 
 \section{Introduction} 
 \label{sec:intro}
-\thispagestyle{firstpage}
+\thispagestyle{titlepage}
 This template provides detailed instructions for submitting papers to the ITU Journal on Future and Evolving Technologies. 
 The next sections describe style, fonts and spacing to adopt. 
 Please use this \LaTeX\ template for your paper. 
@@ -115,29 +115,26 @@ The balancing can be achieved using the \texttt{\textbackslash balance} command 
 
 \section{Title page}
 \label{sec:title-page}
-The paper title should be \texttt{Large} size, uppercase, and bold face, as shown in this template.\footnote{NEEDS TO BE UPDATED}
+The paper title should be \texttt{Large} size, as shown in this template.
 The authors' name(s) and affiliation(s) are to appear below the title in capital and lower case letters, in \texttt{large} size, keeping the spacing as indicated in the template instructions.
 
 
 
 \section{Type-style and fonts}
 \label{sec:fonts}
-Text should appear in Cambria font\footnote{NEEDS TO BE UPDATED}, size 10-point, with single spacing, apart from headings.
+Text should appear in size 10-point, with single spacing, apart from headings.
 This is already implemented as default in the template.
-To be able to obtain the Cambria character \textbf{compile using XeLaTeX}, instead of pdflatex.\footnote{CAN BE REMOVED}
-To obtain the proper paragraph spacing, please insert an empty line in the \LaTeX~ source file.
+To obtain the proper paragraph delineation using indentation, please insert an empty line in the \LaTeX\ source file as normally done in articles.
 
 
 \section{Sections}
 \label{sec:sections}
-Major headings (for example, ``1. INTRODUCTION'') are predefined in the template, and \textbf{should not} be changed.
+Major headings (for example, ``1. Introduction'') are predefined in the template, and \textbf{should not} be changed.
 
-%%= subsection example =%%
 \subsection{Subsections}
 \label{ssec:subsection}
 Subheadings are predefined in the template, and \textbf{should not} be changed.
 
-%%= subsubsection example =%%
 \subsubsection{Sub-subsections}
 \label{sssec:subsubsection}
 Sub-subheadings, as in this paragraph, are discouraged.
@@ -153,17 +150,15 @@ Figure captions must be placed on the bottom, not top, of the figure.
 Table captions must be located on the top of the table.
 Keep titles with images. 
 
-%%= example figure =%%
 \begin{figure}
 	\includegraphics[width=\columnwidth]{Figure1}
 	\caption{ECI Host - Hardware}
-	\label{fig:fig1} 
+	\label{fig:ECIhost} 
 \end{figure}
-%%======%%
 
 
 And for a table:
-%%= example table =%%
+
 \begin{table}
 	\centering
 	\caption{Table title style}\label{tab:tab1} 
@@ -187,15 +182,13 @@ And for a table:
 	\end{tabular}
 	\end{small}
 \end{table}
-%%======%%
 
 
 And an equation:
-%%= example equation =%%
-\begin{equation}\label{eq:eq1}
+
+\begin{equation}\label{eq:PL}
 	PL(D)=PL(D)+10\log 
 \end{equation}
-%%======%%
 
 
 \section{Footnotes}
@@ -204,14 +197,17 @@ Use footnotes sparingly.\footnote{Preferably do not use footnotes at all.}
 To help your readers, avoid using footnotes altogether and include necessary peripheral observations in the text (within parentheses, if you prefer, as in this sentence).
 
 
-\section{Using references}
+\section{References}
 \label{sec:references}
-List and number all bibliographical references at the end of the paper, and refer to them in the text as shown in this sentence \cite{wiegand2019WHO}.
+List and number all bibliographical references in a separate flat-text file with the exension \texttt{.bib}.
+Add the bibliography file using the command \texttt{{\textbackslash addbibresource}} in the section indicated in the preamble at the beginning of this file.
+References can then be added using the commannd \texttt{\textbackslash cite} and will be rendered as: \cite{wiegand2019WHO}.
 
 
 \section{Cross references}
 \label{sec:cross-references}
 This template uses the \texttt{cleveref} package to intelligently handle cross references.
+It is suggested to use descriptive labels, instead of number, e.g. \texttt{sec:intro}, not \texttt{sec:no1}.
 
 
 \section{Page numbering}
@@ -223,8 +219,8 @@ Please number all pages of your paper.
 \label{sec:code-chunks}
 
 
-\section{Authoring recommendations}
-\label{sec:sec10}
+\section{Recommendations}
+\label{sec:recommendations}
 Define abbreviations and acronyms the first time they are used in the text, even if they have already been defined in the abstract.
 Abbreviations and acronyms should be avoided in the title.
 
