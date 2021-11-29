@@ -1,6 +1,7 @@
 \documentclass[10pt,a4paper,twocolumn]{article}
 \usepackage[backend=biber,natbib=true,style=numeric,maxnames=50,sorting=none]{biblatex}
 \usepackage{amsmath}
+\usepackage[explicit]{titlesec}
 \usepackage{float}
 \usepackage{authblk}
 \usepackage{fancyhdr}
@@ -38,6 +39,8 @@
 	\textbf{\textit{Keywords---}} #1
 }
 
+\titleformat{\section}{\large\bfseries}{\thesection.}{1em}{\MakeUppercase{#1}}
+
 \date{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,8 +53,8 @@
 \addbibresource{bibliography-file.bib}
 
 % title
-\title{Template for submitting papers to the \\
-	   ITU Journal on Future and Evolving Technologies}
+\title{\uppercase{Template for submitting papers to the \\
+	   ITU Journal on Future and Evolving Technologies}}
 
 % authors
 \author[1]{ITU Journal Editors}
